@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Solowejtschik — Product Manager</title>
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --ivory:#F4EFE4;--plum:#3D1F5C;--forest:#1E2B1A;
+    --jungle:#3D7A52;--coral:#C96B45;--sage:#A8BE94;
+    --lime:#C8F000;--muted:#7A8C70;--line:#D0C9B8;
+  }
+  body{background:var(--ivory);color:var(--forest);font-family:'DM Mono',monospace;min-height:100vh}
+  .bar{display:flex;height:5px}
+  .b1{flex:2;background:var(--plum)}.b2{flex:1;background:var(--coral)}.b3{flex:2;background:var(--jungle)}.b4{flex:1;background:var(--lime)}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 3rem;border-bottom:1px solid var(--line)}
+  .nn{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--forest)}
+  .nl{display:flex;gap:2rem;list-style:none}
+  .nl a{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+  .nl a:hover{color:var(--lime)}
+</style>
+{% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<div class="bar"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span></div>
+
+<nav>
+  <span class="nn">Maria Solowejtschik</span>
+  <ul class="nl">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

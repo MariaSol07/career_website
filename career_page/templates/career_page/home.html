@@ -1,0 +1,78 @@
+{% extends "career_page/base.html" %}
+
+{% block extra_css %}
+<style>
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 80px)}
+  .hl{background:linear-gradient(160deg,var(--plum) 0%,#2A1A3E 40%,var(--forest) 100%);display:flex;flex-direction:column;justify-content:center;padding:3.5rem;position:relative;overflow:hidden}
+  .hl::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:var(--lime);opacity:.06;filter:blur(40px)}
+  .hl::after{content:'';position:absolute;bottom:-80px;left:20px;width:200px;height:200px;border-radius:50%;background:var(--jungle);opacity:.15}
+  .id{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;position:relative;z-index:1}
+  .pp{width:84px;height:84px;border-radius:50%;background:conic-gradient(var(--lime) 0deg 80deg,var(--plum) 80deg 180deg,var(--jungle) 180deg 270deg,var(--coral) 270deg 360deg);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .ppi{width:74px;height:74px;border-radius:50%;background:#1E1030;display:flex;align-items:center;justify-content:center}
+  .ppt{font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);text-align:center;line-height:1.5}
+  .ey{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-bottom:.3rem;position:relative;z-index:1;opacity:.9}
+  .hn{font-family:Georgia,serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;line-height:1.05;color:var(--ivory);position:relative;z-index:1}
+  .hn em{font-style:italic;color:var(--lime)}
+  .ht{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.08);margin-bottom:1.75rem;position:relative;z-index:1}
+  .hb{font-family:Georgia,serif;font-size:1.1rem;font-weight:300;line-height:1.75;color:rgba(255,255,255,.8);max-width:420px;margin-bottom:1.75rem;position:relative;z-index:1}
+  .bould{border-left:3px solid var(--lime);padding:.5rem 0 .5rem 1rem;font-size:.72rem;line-height:1.6;color:var(--lime);display:inline-block;margin-bottom:2.5rem;position:relative;z-index:1}
+  .cta{display:flex;gap:1rem;align-items:center;position:relative;z-index:1}
+  .bp{background:var(--lime);color:var(--forest);padding:.8rem 1.75rem;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;text-decoration:none;transition:all .2s;font-weight:500}
+  .bp:hover{background:var(--coral);color:var(--ivory)}
+  .bs{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);text-decoration:none;border-bottom:1px solid rgba(200,240,0,.3);padding-bottom:2px;transition:color .2s}
+  .bs:hover{color:var(--lime)}
+  .hr{background:var(--ivory);display:flex;flex-direction:column;justify-content:center;padding:3rem 3rem 3rem 3.5rem}
+  .ml{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem}
+  .metric{display:flex;align-items:center;gap:1.25rem;padding:1.4rem 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:all .2s;position:relative}
+  .metric:first-of-type{border-top:1px solid var(--line)}
+  .metric::before{content:'';position:absolute;left:-3.5rem;top:0;bottom:0;width:3px;background:transparent;transition:background .25s}
+  .m1:hover::before{background:var(--coral)}.m2:hover::before{background:var(--plum)}.m3:hover::before{background:var(--lime)}
+  .metric:hover .mn{color:var(--plum)}
+  .metric:hover .ma{transform:translateX(4px);color:var(--plum)}
+  .mn{font-family:Georgia,serif;font-size:2.5rem;font-weight:300;min-width:100px;color:var(--forest);transition:color .2s}
+  .mt{display:flex;flex-direction:column;gap:.25rem}
+  .mti{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+  .ms{font-size:.64rem;color:var(--muted)}
+  .ma{margin-left:auto;color:var(--line);transition:all .2s}
+  .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hl">
+    <div class="id">
+      <div class="pp"><div class="ppi"><span class="ppt">your<br>photo</span></div></div>
+      <div>
+        <p class="ey">Product Manager · Berlin</p>
+        <h1 class="hn">Maria<br><em>Solowejtschik</em></h1>
+      </div>
+    </div>
+    <p class="ht">8+ years · B2B SaaS · Platform</p>
+    <p class="hb">I owned the platform layer — integrations, user management, authentication. At RaiseNow and Pepper.com, I made decisions that touched millions of users.</p>
+    <p class="bould">Outside work I boulder.<br>I like hard problems with no obvious handholds.</p>
+    <div class="cta">
+      <a href="#" class="bp">View my work</a>
+      <a href="#" class="bs">Get in touch</a>
+    </div>
+  </div>
+  <div class="hr">
+    <p class="ml">Selected impact</p>
+    <a href="#" class="metric m1">
+      <span class="mn">8+</span>
+      <div class="mt"><span class="mti"><span class="dot" style="background:#C96B45"></span>Years in B2B SaaS</span><span class="ms">Platform, integrations, monetization</span></div>
+      <span class="ma">→</span>
+    </a>
+    <a href="#" class="metric m2">
+      <span class="mn">1</span>
+      <div class="mt"><span class="mti"><span class="dot" style="background:#3D1F5C"></span>Integration framework from scratch</span><span class="ms">RaiseNow Connect</span></div>
+      <span class="ma">→</span>
+    </a>
+    <a href="#" class="metric m3">
+      <span class="mn">10M+</span>
+      <div class="mt"><span class="mti"><span class="dot" style="background:#C8F000"></span>Monthly users</span><span class="ms">Pepper.com monetization</span></div>
+      <span class="ma">→</span>
+    </a>
+  </div>
+</section>
+{% endblock %}
